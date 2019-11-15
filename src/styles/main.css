@@ -1,0 +1,271 @@
+html {
+  height: 100%;
+  font-family: 'Rubik', sans-serif;
+
+}
+
+body{
+  margin: 0px;
+  height: 100%;
+  background: white;
+}
+
+.NoFavs{
+  position: relative;
+  font-size: calc(50vw / .725 / 11);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  top: 10%;
+  width: 70%;
+  height: 40%;
+  background: black;
+  border-radius: 25px;
+  color: white;
+}
+.NoFavs::before {
+  border-radius: 25px;
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background:
+    linear-gradient(red, transparent),
+    linear-gradient(to top left, lime, transparent),
+    linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+  content: "";
+}
+
+.Gifs{
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  padding-top: 32px;
+  flex-flow: row wrap;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.TopHatContainer {
+  display: flex;
+  align-items: center;
+  top:0px;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  padding-left: 10px;
+}
+.TopHatBackLight{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 42px;
+  top: 0px;
+  content: '';
+  background: -webkit-linear-gradient(left, green, cyan, blue, violet, red, orange, yellow);
+  background: -o-linear-gradient(right, green, cyan, blue, violet, red, orange, yellow);
+  background: -moz-linear-gradient(right, green, cyan, blue, violet, red, orange, yellow);
+  background: linear-gradient(to right, green, cyan, blue, violet, red, orange, yellow);
+}
+.TopHatForm{
+  border:none;
+  background: none;
+  outline:none;
+  color: white;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.TopHatForm input:focus{
+  outline:0;
+}
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.TopHatSearch{
+  border:none;
+  background: rgb(97, 87, 255);
+  height: 20px;
+  border-radius: 20px;
+  padding: 5px;
+  color: white;
+  width: 165px;
+}
+.TopHatButton{
+  outline: 0;
+  position: relative;
+  right: 28px;
+  top: 3px;
+  float: right;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Icon {
+  height: 20px;
+  width: 20px;
+}
+
+.Inverted {
+  filter: invert();
+}
+
+.IconButton {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0px 32px;
+  transition: 0.3s;
+  background-color: transparent;
+  outline:none;
+  border: none;
+  height: 40px
+}
+.IconButton:hover{
+  background-color: rgb(97, 87, 255);
+}
+
+.GifModal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6);
+}
+.GifModalCard{
+  border-radius: 25px;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  max-width: 95%;
+}
+.GifModalCard::before {
+  border-radius: 25px;
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background:
+    linear-gradient(red, transparent),
+    linear-gradient(to top left, lime, transparent),
+    linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
+  content: "";
+}
+.GifModalButtons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+.ExpandedGif {
+  width: 95%;
+  padding: 20px;
+  max-width: 90%;
+  min-width: 70%;
+}
+
+.GifCard {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 30px;
+  display: block;
+  margin-top: 10px;
+}
+.GifCard:hover {
+  box-shadow: 0 4px 8px 0 #2f3640, 0 6px 20px 0 #2f3640;
+  transition: box-shadow .2s;
+}
+.GifCenterer {
+  display: inline-flex;
+  position:relative;
+  right: -50%;
+}
+.GifCardImg {
+  display: inline-block;
+  position:relative;
+  left: -50%;
+}
+.Spinner {
+  display: inline-block;
+  position:relative;
+  max-height: 200px;
+  left: -50%;
+  opacity: 30%;
+}
+.ModalSpinner {
+  opacity: 30%;
+}
+.Hidden {
+  display: none;
+}
+
+.ToastMessage{
+  position: absolute;
+  border-radius: 0px 0px 10px 10px;
+  padding: 0px 10px 0px 10px;
+  top: 0px;
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s;
+  background-color: lightgreen;
+}
+
+@media only screen and (max-width: 400px) {
+  .Gifs{
+    justify-content: center;
+  }
+  .TopHatSearch{
+    width:100px;
+  }
+
+  .IconButton {
+    padding: 0px 20px;
+  }
+
+  .Spinner {
+    left: 0;
+  }
+  .GifCenterer{
+    right:0;
+    width: 100%;
+    height: auto;
+  }
+  .GifCardImg{
+    position: relative;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .GifCard {
+    width: 95%;
+    height: auto;
+    position: relative;
+    display: inline-table;
+  }
+}
