@@ -39,13 +39,13 @@ export default function GifModal(){
     <div className={Object.keys(data).length !== 0 ? "GifModal" : "GifModal Hidden"}>
       <div className="GifModalCard" ref={card}>
         <span className="ToastMessage"></span>{
-          data.images ?
+          data.images &&
             <Img
               className="ExpandedGif"
               crossOrigin="anonymous"
               src={data.images.original.url}
               loader={<img className="ModalSpinner" alt="loading" src={spinner}/>}
-            />:""
+            />
         }
         <div className="GifModalButtons">
           <button className='CloseModal IconButton' onClick={() => dispatch(setModalData())}>
