@@ -14,11 +14,11 @@ Run:
 
 
 Tools Used:
-  react as the main framework
-  react-redux-dom for app state management
-  react-router for displaying separate pages
-  axios for requests
-  react-image to display spinners while content is loading
+  * react as the main framework
+  * react-redux-dom for app state management
+  * react-router for displaying separate pages
+  * axios for requests
+  * react-image to display spinners while content is loading
 
 Current Features:
 
