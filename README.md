@@ -33,16 +33,16 @@ Current Features:
     When the user clicks a gif, they get a modal that shows them the original gif, with an option to favorite, and additional information
 
   Modal Notifications
-    When a user favorites or unfavorites a gif, they get a drop down notification
+    When a user favorites or unfavorites a gif, they get a drop down notification.
     Current issues:
 
   * lack of error handling. Will always give a success message, even on failure.
 
   Favorites Tab
-    When the user favorites a gif, they can later view that gif in their favorites
+    When the user favorites a gif, they can later view that gif in their favorites.
     Current issues:
 
-  * Search bar doesn't cause a change while in favs tab, though the gifs are loaded into the homepage
+  * Search bar doesn't cause a change while in favs tab, though the gifs are loaded into the homepage.
   * A small sliver of the bottom of each card is cut off in the favorites tab. This error came about when messing with scrolling and css positions. Low visibility.
 
 Planned Features:
